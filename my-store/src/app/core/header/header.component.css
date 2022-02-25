@@ -1,0 +1,14 @@
+.nav-container {
+    text-align: center;
+    background: #33B5E5;
+    color: #fff;
+    padding: 12px;
+  }
+
+.nav {
+      border: solid black;
+  }
+
+  a {
+    color: #ffffff;
+  }
