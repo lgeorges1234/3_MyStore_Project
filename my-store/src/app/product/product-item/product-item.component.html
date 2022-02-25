@@ -1,5 +1,5 @@
 <div class="product-container">
-    <img src="{{ product.url }}" alt="{{ product.description }}" class="product-image">
+    <a routerLink="/product/product-item-detail/{{ product.id }}"><img src="{{ product.url }}" alt="{{ product.description }}" class="product-image"></a>
     <h3>{{ product.name }}</h3>
     <h3>${{ product.price }}</h3>
     <form (ngSubmit)="onSubmit()" class="select-input">
@@ -7,4 +7,3 @@
         <button type="submit">Add to cart</button>
     </form>
 </div>
-
