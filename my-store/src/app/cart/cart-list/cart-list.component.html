@@ -1,0 +1,18 @@
+<div class="cart-container">
+    <div class="cart-item">
+        <app-cart-items *ngFor="let item of cartItems" [item]="item" (quantityUpdate)="quantityUpdate()"></app-cart-items>
+        <h1>Total: {{ totalPrice }}</h1>
+    </div>
+    <div class="cart-form">
+        <form (ngSubmit)="onSubmit">
+            <label for="fullname">Fullname</label>
+            <input type="text" name="fullname" [(ngModel)]="fullname">
+            <label for="address">Address</label>
+            <input type="text" name="address" [(ngModel)]="address">
+            <label for="creditCard">Credit card number</label>
+            <input type="text" name="creditCard" [(ngModel)]="creditCard">
+            <p>We'll never share tour payment details with anyone else.</p>
+            <a routerLink="/cart/cart-success"><button type="submit">Submit</button></a>
+        </form>
+    </div>
+</div>

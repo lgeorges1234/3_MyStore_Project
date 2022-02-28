@@ -8,7 +8,7 @@ import { Product } from 'src/app/model/Product';
 })
 export class ProductItemComponent implements OnInit {
   @Input() product: Product;
-  quantity: number = 0;
+  
   constructor() { 
     this.product = {
       "id": 0,
@@ -16,12 +16,11 @@ export class ProductItemComponent implements OnInit {
       "price": 0,
       "url": '',
       "description": '',
-    }
+      "quantity": 0,
+    };
   }
 
   ngOnInit(): void {
   }
-
-  onSubmit(): void { }
 
 }

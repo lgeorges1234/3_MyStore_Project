@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ProductsService } from 'src/app/core/services/product/products.service';
 import { Product } from 'src/app/model/Product';
-import { ProductsService } from 'src/app/services/products.service';
+
 
 @Component({
   selector: 'app-product-item-detail',
@@ -16,8 +17,8 @@ export class ProductItemDetailComponent implements OnInit {
     "price": 0,
     "url": '',
     "description": '',
-  }
-  ;
+    "quantity": 0,
+  };
   constructor(private route: ActivatedRoute, private productsService: ProductsService) { }
 
   ngOnInit(): void {
