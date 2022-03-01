@@ -1,14 +1,51 @@
 .nav-container {
-    text-align: center;
     background: #33B5E5;
     color: #fff;
-    padding: 12px;
+    display: flex;
+    align-items: center;
+    padding: 1.3em;
   }
 
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 100px auto 40px;
+  line-height: .8;
+}
+
+.logo h1 {
+  font-weight: 400;
+  font-variant-caps: small-caps;
+  margin:0;
+}
+
+.logo-img {
+  max-height: 1em;
+}
+ 
 .nav {
-      border: solid black;
-  }
+  display: flex;
+  align-items: center;
+  height: 100%;
+}  
 
-  a {
-    color: #ffffff;
-  }
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.7rem;
+  margin-right: 70px;
+  font-variant-caps: all-small-caps;
+  padding-bottom: 2px;
+  letter-spacing: 1px;
+}
+
+.nav a:focus,
+.nav a:hover {
+  border-bottom: solid 2px;
+}
+
+.nav .active {
+  cursor: default;
+  border-bottom: solid 2px;
+}
