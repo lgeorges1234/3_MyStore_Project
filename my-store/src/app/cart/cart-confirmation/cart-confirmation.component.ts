@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CartService } from 'src/app/core/services/cart/cart.service';
 
 @Component({
@@ -9,10 +10,12 @@ import { CartService } from 'src/app/core/services/cart/cart.service';
 export class CartConfirmationComponent implements OnInit {
   totalPrice: number = 0;
   fullname: string = '';
-  constructor(private cartService: CartService) { }
+  constructor(private route: ActivatedRoute, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.totalPrice = this.cartService.getCartTotal();
-  }
-
-}
+    this.route.params.subscribe(params => {
+      this.fullname = params['fullname'];
+    });
+  };
+};

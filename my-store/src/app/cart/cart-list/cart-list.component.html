@@ -12,7 +12,7 @@
             <label for="creditCard">Credit card number</label>
             <input type="text" name="creditCard" [(ngModel)]="creditCard">
             <p>We'll never share tour payment details with anyone else.</p>
-            <a routerLink="/cart/cart-success"><button type="submit">Submit</button></a>
+            <a routerLink="/cart/cart-success/{{ fullname }}"><button type="submit">Submit</button></a>
         </form>
     </div>
 </div>
