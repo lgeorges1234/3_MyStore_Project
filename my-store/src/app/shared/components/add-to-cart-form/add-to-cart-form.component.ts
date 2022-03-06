@@ -9,6 +9,7 @@ import { Product } from 'src/app/model/Product';
 })
 export class AddToCartFormComponent implements OnInit {
   quantity: number = 0;
+  quantityNumber: number[];
   @Input() product: Product;
 
   constructor(private cartService: CartService) {
@@ -20,6 +21,7 @@ export class AddToCartFormComponent implements OnInit {
       "description": '',
       "quantity": 0,
     }
+    this.quantityNumber = Array.from(Array(15).keys());
    }
 
   ngOnInit(): void {
@@ -28,9 +30,10 @@ export class AddToCartFormComponent implements OnInit {
      else {this.quantity = 0;}
   }
 
+
   getQuantity(): number {
     const cartItem = this.cartService.getCart().filter(item => item.id === this.product.id).map(item => item.quantity);
-    if (cartItem) { return cartItem[0]; } 
+    if (cartItem) return cartItem[0]; 
     return 0;
   }
 
@@ -43,6 +46,7 @@ export class AddToCartFormComponent implements OnInit {
       description: this.product.description,
       quantity: this.quantity,
     };
-    this.cartService.addToCart (product)
+    this.cartService.addToCart (product);
+    if (product.quantity) alert(`You ve added ${product.name} to your cart`)
   }
 }

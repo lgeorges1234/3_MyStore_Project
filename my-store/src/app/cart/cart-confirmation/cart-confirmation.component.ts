@@ -17,5 +17,6 @@ export class CartConfirmationComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.fullname = params['fullname'];
     });
+    this.cartService.clearCart();
   };
 };

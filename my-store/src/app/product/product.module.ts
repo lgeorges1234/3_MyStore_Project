@@ -19,7 +19,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     ProductRoutingModule,
-    SharedModule
+    SharedModule,
   ],
   exports: [
     ProductItemDetailComponent,

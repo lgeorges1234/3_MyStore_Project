@@ -20,14 +20,14 @@ export class CartItemsComponent implements OnInit {
       url: '',
       description: '',
       quantity: 1,
+    }
   }
-   }
 
   ngOnInit(): void {
     this.cartItems = this.cartService.getCart();
   }
 
-  quantityChanged(newQuantity: number) {
+  quantityChanged(newQuantity:any): void {
     const newItem: Product = {
       id: this.item.id,
       name: this.item.name,
@@ -37,6 +37,7 @@ export class CartItemsComponent implements OnInit {
       quantity: newQuantity,
     }
     this.cartService.addToCart(newItem);
+    this.cartItems = this.cartService.getCart();
     this.quantityUpdate.emit();
   }
 

@@ -1,5 +1,10 @@
 <form #form="ngForm" (ngSubmit)="onSubmit()" class="select-input">
-    <input class="select-input" type="number" id="quantity" value="{{ quantity }}" name="quantity" min="1" max="25" [(ngModel)]="quantity">
-    <br>
+    <select name="quantity" class="select-input" [(ngModel)]="quantity" >
+        <option disabled>Choose Quantity</option>
+        <option selected >{{ quantity }}</option>
+        <option *ngFor="let number of quantityNumber" >
+          {{ number }}
+        </option>
+      </select>
     <button type="submit">Add to cart</button>
 </form>

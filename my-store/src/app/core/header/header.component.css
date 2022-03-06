@@ -3,14 +3,14 @@
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 1.3em;
+    padding: .5em;
   }
 
 .logo {
+  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto 100px auto 40px;
   line-height: .8;
 }
 
@@ -38,14 +38,17 @@
   font-variant-caps: all-small-caps;
   padding-bottom: 2px;
   letter-spacing: 1px;
+  color: #f2f2f2;
 }
 
-.nav a:focus,
-.nav a:hover {
+.nav a:hover,
+.nav a:focus {
   border-bottom: solid 2px;
+  color: #fff;
 }
 
 .nav .active {
   cursor: default;
   border-bottom: solid 2px;
+  
 }

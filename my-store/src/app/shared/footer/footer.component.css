@@ -1,6 +1,7 @@
 .nav-container {
-    text-align: center;
-    background: #33B5E5;
-    color: #fff;
-    padding: 1em;
-  }
+  justify-self: flex-start;
+  text-align: center;
+  background: #33B5E5;
+  color: #f2f2f2f2;
+  padding: 1em;
+}

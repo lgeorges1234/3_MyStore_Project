@@ -3,8 +3,6 @@
     <div class="cart-item-details">
         <h4>{{ item.name }}</h4>
         <h4>${{ item.price }}</h4>
-        <form #form="ngForm" class="select-input">
-            <input class="select-input" type="number" id="quantity" name="quantity" value="{{ item.quantity }}" [(ngModel)]="item.quantity" (ngModelChange)=quantityChanged($event)>
-        </form>
+        <input class="select-input" type="number" name="quantity" value="{{ item.quantity }}" [(ngModel)]="item.quantity" (ngModelChange)="quantityChanged($event)"> 
     </div>
 </div>

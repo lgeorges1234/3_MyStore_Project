@@ -1,20 +1,20 @@
 .confirmation-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 8%;
-  }
-  
-  .confirmation-items {
-    display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
-  
-  .confirmation-header {
-    color: #33e5bc
-  }
-  
-  .confirmation-item {
-    margin-bottom: 30px;
-  }
+
+.confirmation-header {
+  color: #33e5bc
+}
+
+.confirmation-container a {
+  background: #33B5E5;
+  color:#fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  letter-spacing: .075em;
+  padding:.5em 1em;
+  margin-top: 20px;
+}

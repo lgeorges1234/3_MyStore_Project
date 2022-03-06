@@ -23,7 +23,6 @@ export class ProductListComponent implements OnInit {
         const product = res[index];
         product["quantity"] = 0;
       }
-
       this.productsList = res;
     });
   }

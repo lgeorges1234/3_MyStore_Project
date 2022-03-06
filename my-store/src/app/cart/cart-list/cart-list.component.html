@@ -1,18 +1,53 @@
 <div class="cart-container">
-    <div class="cart-item">
-        <app-cart-items *ngFor="let item of cartItems" [item]="item" (quantityUpdate)="quantityUpdate()"></app-cart-items>
-        <h1>Total: {{ totalPrice }}</h1>
+    <div class="cart-item" [ngSwitch]="cartItems.length>0">
+        <div *ngSwitchCase=true>
+            <app-cart-items *ngFor="let item of cartItems" [item]="item" (quantityUpdate)="quantityUpdate()"></app-cart-items>
+        </div>
+        <div *ngSwitchCase=false>Your card is empty</div>
+        <h2 class="total">Total: {{ totalPrice }} $</h2>
     </div>
-    <div class="cart-form">
-        <form (ngSubmit)="onSubmit">
-            <label for="fullname">Fullname</label>
-            <input type="text" name="fullname" [(ngModel)]="fullname">
-            <label for="address">Address</label>
-            <input type="text" name="address" [(ngModel)]="address">
-            <label for="creditCard">Credit card number</label>
-            <input type="text" name="creditCard" [(ngModel)]="creditCard">
-            <p>We'll never share tour payment details with anyone else.</p>
-            <a routerLink="/cart/cart-success/{{ fullname }}"><button type="submit">Submit</button></a>
-        </form>
+    <form #form="ngForm" (ngSubmit)="onSubmit" class="cart-form">
+        <label for="fullname">Fullname *</label>
+        <input type="text" name="fullname" required  minlength="4" [(ngModel)]="fullname" placeholder="Ex: Georges Dupont" #name="ngModel" >
+        <label for="address">Address *</label>
+        <input type="text" name="address" required minlength="6" [(ngModel)]="address"  placeholder="Ex: 253 N. Cherry St. London" #addr="ngModel">
+        <label for="creditCard">Credit card number *</label>
+        <input type="text" name="creditCard" 
+            required  
+            pattern="^4[0-9]{12}(?:[0-9]{3})?$"
+            [(ngModel)]="creditCard" 
+            placeholder="Ex: 4012888888881881" #credit='ngModel'>
+        <p>We'll never share your payment details with anyone else.</p>
+       <button class="submit" type="submit" [disabled]="form.invalid || totalPrice === 0" (click)="getToCartConfirmation()">Submit</button>
+    </form>
+    <div class="cart-warning">
+        <div *ngIf="totalPrice === 0">
+            Please fill your cart before proceeding.
+        </div>
+        <div *ngIf="name.invalid && name.touched">
+            <div *ngIf="name.errors?.['required']">
+                Please provide your fullname in order to complete your command.
+            </div>
+            <div *ngIf="name.errors?.['minlength']">
+                The fullname must contains at least 4 characters.
+            </div>
+        </div>
+        <div *ngIf="addr.invalid && addr.touched">
+            <div *ngIf="addr.errors?.['required']">
+                Please provide your address in order to complete your command.
+            </div>
+            <div *ngIf="addr.errors?.['minlength']">
+                The address must contains at least 6 characters.
+            </div>
+        </div>
+        <div *ngIf="credit.invalid && credit.touched">
+            <div *ngIf="credit.errors?.['required']">
+                Please provide your credit card number in order to complete your command.
+            </div>
+            <div *ngIf="credit.errors?.['pattern']">
+                Please provide a valid Visa credit card: 4012888888881881
+            </div>
+        </div>
     </div>
+
 </div>

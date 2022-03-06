@@ -1,0 +1,23 @@
+form {
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 108px; 
+}
+
+button {
+    background: #33B5E5;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    padding: .4em .3em;
+    cursor: grab;
+}
+
+.select-input {
+    margin-bottom: 12px;
+    padding: .3em;
+    border: none;
+}

@@ -17,7 +17,7 @@ export class CartService {
     let newCart: Product[] = [];
     newCart = this.cart.filter(item => item.id !== cartItem.id)
     this.cart = newCart;
-    this.cart.push(cartItem);
+    if(cartItem.quantity) this.cart.push(cartItem);
     return this.cart;
   }
 
