@@ -24,11 +24,11 @@ A user can add a product to it's cart either from the list of products or from a
 
 ## Getting Started
 
-*$git clone https://github.com/lgeorges1234/3_MyStore_Project.git
-*$cd my-store
-*$npm install
-*$ng-serve
- *Go to localhost:4200 in your browser
+* $git clone https://github.com/lgeorges1234/3_MyStore_Project.git
+* $cd my-store
+* $npm install
+* $ng-serve
+* Go to localhost:4200 in your browser
  
 ---
 
