@@ -6,8 +6,7 @@
 * [Technologies](#technologies)
 * [Getting Started](#getting-started)
 * [Views and angular's modules](#views-and-angulars-modules)
-* [API call](#api-call)
-* [Available Scripts](#available-scripts)
+
 ---
 
 ## General info
