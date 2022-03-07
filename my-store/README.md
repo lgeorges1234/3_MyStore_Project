@@ -12,7 +12,7 @@
 ## General info
 
 
-My Online Store is an Angular application that allows customers to buy online products. 
+***My Online Store*** is an Angular application that allows customers to buy online products. 
 The application fetch a list of products and presents them through the landing page of the Single Page Application. 
 A user can add a product to it's cart either from the list of products or from a detail's product page. Once the cart has been fill in, a navigation link allows the user to access the cart section of the site where the cart is summarized. After adjusting the quantities of cart's products and completing users informations, the cart can be submited. 
 
