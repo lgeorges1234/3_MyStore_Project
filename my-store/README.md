@@ -1,27 +1,54 @@
-# MyStore
+# Online storefront frontend API
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+## Table of contents
 
-## Development server
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Getting Started](#getting-started)
+* [Views and angular's modules](#views-and-angulars-modules)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## General info
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+***My Online Store*** is an Angular application that allows customers to buy online products. 
+The application fetch a list of products and presents them through the landing page of the Single Page Application. 
+A user can add a product to it's cart either from the list of products or from a detail's product page. Once the cart has been fill in, a navigation link allows the user to access the cart section of the site where the cart is summarized. After adjusting the quantities of cart's products and completing users informations, the cart can be submited. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Technologies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Angular 13
 
-## Running end-to-end tests
+## Getting Started
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+$git clone https://github.com/lgeorges1234/3_MyStore_Project.git
+$cd my-store
+$npm install
+$ng-serve
+```
+Open your browser and go to `localhost:4200` 
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Views and Angular's modules
+
+The application currently contains 2 featured modules, each one allowing lazy-loading:
+* Product module :
+  - "/product"                      : landing page of the site. It contains the list of available products. Picture's product allows the user to access the product's page details.
+  - "/product/:id"                  : product page details.
+
+* Cart module:
+  - "/cart"                         : cart page. It contains the cart fill in with all articles, the total sum and a form allowing a user to complete it's order.
+  - "cart/confirmation/:fullname"    : confirmation page. The user receive a confirmation that it's order has been taken into accompt and will soon be proceed.
+
+---
+
+
+
+
+
+
