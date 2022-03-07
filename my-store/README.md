@@ -38,12 +38,12 @@ Open your browser and go to `localhost:4200`
 
 The application currently contains 2 featured modules, each one allowing lazy-loading:
 * Product module :
-- "/product"                      : landing page of the site. It contains the list of available products. Picture's product allows the user to access the product's page details.
-- "/product/:id"                  : product page details.
+  - "/product"                      : landing page of the site. It contains the list of available products. Picture's product allows the user to access the product's page details.
+  - "/product/:id"                  : product page details.
 
 * Cart module:
-- "/cart"                         : cart page. It contains the cart fill in with all articles, the total sum and a form allowing a user to complete it's order.
-- "cart/confirmation/:fullname    : confirmation page. The user receive a confirmation that it's order has been taken into accompt and will soon be proceed.
+  - "/cart"                         : cart page. It contains the cart fill in with all articles, the total sum and a form allowing a user to complete it's order.
+  - "cart/confirmation/:fullname    : confirmation page. The user receive a confirmation that it's order has been taken into accompt and will soon be proceed.
 
 ---
 
