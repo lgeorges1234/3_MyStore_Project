@@ -13,8 +13,8 @@
 
 
 My Store is an Angular application that allows customers to buy online products. 
-The application fetch a list of products and presents them through the landing page. A user can add a product to it's cart either from the list of products or from a detail's product page. Once the cart is fill in, a navigation link allows the user to access the cart section of the site where the cart is summarized and, after completing users informations, ready to be submited. 
-Three
+The application fetch a list of products and presents them through the landing page of the Single Page Application. 
+A user can add a product to it's cart either from the list of products or from a detail's product page. Once the cart has been fill in, a navigation link allows the user to access the cart section of the site where the cart is summarized. After adjusting the quantities of cart's products and completing users informations, the cart can be submited. 
 
 ---
 
@@ -24,11 +24,11 @@ Three
 
 ## Getting Started
 
- <script>$git clone https://github.com/lgeorges1234/3_MyStore_Project.git</script>
- <script>$cd my-store</script>
- <script>$npm install</script>
- <script>$ng-serve</script>
- Go to localhost:4200 in your browser
+*$git clone https://github.com/lgeorges1234/3_MyStore_Project.git
+*$cd my-store
+*$npm install
+*$ng-serve
+ *Go to localhost:4200 in your browser
  
 ---
 
