@@ -17,7 +17,8 @@ export class CartService {
     let newCart: Product[] = [];
     newCart = this.cart.filter(item => item.id !== cartItem.id)
     this.cart = newCart;
-    if(cartItem.quantity) this.cart.push(cartItem);
+    if(cartItem.quantity != 0) {this.cart.push(cartItem);}
+    else {alert(`You removed "${cartItem.name}" item form your cart`)}
     return this.cart;
   }
 

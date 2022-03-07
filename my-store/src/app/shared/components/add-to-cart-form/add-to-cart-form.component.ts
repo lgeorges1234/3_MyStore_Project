@@ -46,7 +46,7 @@ export class AddToCartFormComponent implements OnInit {
       description: this.product.description,
       quantity: this.quantity,
     };
-    this.cartService.addToCart (product);
-    if (product.quantity) alert(`You ve added ${product.name} to your cart`)
+    this.cartService.addToCart(product);
+    if (product.quantity != 0) alert(`You've added "${product.name}" item to your cart`)
   }
 }

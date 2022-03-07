@@ -16,7 +16,7 @@
             required  
             pattern="^4[0-9]{12}(?:[0-9]{3})?$"
             [(ngModel)]="creditCard" 
-            placeholder="Ex: 4012888888881881" #credit='ngModel'>
+            placeholder="Ex Visa: 4012888888881881" #credit='ngModel'>
         <p>We'll never share your payment details with anyone else.</p>
        <button class="submit" type="submit" [disabled]="form.invalid || totalPrice === 0" (click)="getToCartConfirmation()">Submit</button>
     </form>
@@ -45,7 +45,7 @@
                 Please provide your credit card number in order to complete your command.
             </div>
             <div *ngIf="credit.errors?.['pattern']">
-                Please provide a valid Visa credit card: 4012888888881881
+                Please provide a valid 12 digits credit card number: 4012888888881881
             </div>
         </div>
     </div>

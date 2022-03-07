@@ -3,6 +3,6 @@
     <div class="cart-item-details">
         <h4>{{ item.name }}</h4>
         <h4>${{ item.price }}</h4>
-        <input class="select-input" type="number" name="quantity" value="{{ item.quantity }}" [(ngModel)]="item.quantity" (ngModelChange)="quantityChanged($event)"> 
+        <input class="select-input" type="number" min="0" max="15" name="quantity" value="{{ item.quantity }}" [(ngModel)]="item.quantity" (ngModelChange)="quantityChanged($event)"> 
     </div>
 </div>

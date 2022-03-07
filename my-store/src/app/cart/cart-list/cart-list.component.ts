@@ -29,7 +29,7 @@ export class CartListComponent implements OnInit {
   }
 
   getToCartConfirmation(): void {
-    this.router.navigateByUrl(`/cart/cart-success/${this.fullname}`);
+    this.router.navigateByUrl(`cart/confirmation/${this.fullname}`);
   }
 
   onSubmit(): void {

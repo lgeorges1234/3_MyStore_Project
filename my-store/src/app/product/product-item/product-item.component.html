@@ -1,5 +1,5 @@
 <div class="product-item-container">
-        <a routerLink="/product/product-item-detail/{{ product.id }}"><img src="{{ product.url }}" alt="{{ product.description }}" class="product-image"></a>
+        <a routerLink="/product/{{ product.id }}"><img src="{{ product.url }}" alt="{{ product.description }}" class="product-image"></a>
         <h3>{{ product.name }}</h3>
         <h4>${{ product.price }}</h4>
         <app-add-to-cart-form [product]="product"></app-add-to-cart-form>
