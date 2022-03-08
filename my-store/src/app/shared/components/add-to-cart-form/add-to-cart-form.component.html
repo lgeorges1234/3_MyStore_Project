@@ -1,5 +1,5 @@
 <form #form="ngForm" (ngSubmit)="onSubmit()" class="select-input">
-    <select name="quantity" class="select-input" [(ngModel)]="quantity" >
+    <select name="quantity" class="select-input" [(ngModel)]="newQuantity" (ngModelChange)="quantityChanged($event)">
         <option disabled>Choose Quantity</option>
         <option selected >{{ quantity }}</option>
         <option *ngFor="let number of quantityNumber" >

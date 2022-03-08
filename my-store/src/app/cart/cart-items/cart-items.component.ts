@@ -9,8 +9,8 @@ import { Product } from 'src/app/model/Product';
 })
 export class CartItemsComponent implements OnInit {
   @Input() item: Product;
-  cartItems: Product[] = [];
-  @Output() quantityUpdate: EventEmitter<Product> = new EventEmitter;
+
+  @Output() modifyItemFromCart: EventEmitter<Product> = new EventEmitter;
 
   constructor(private cartService: CartService) { 
     this.item = {
@@ -24,7 +24,7 @@ export class CartItemsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.cartItems = this.cartService.getCart();
+
   }
 
   quantityChanged(newQuantity:any): void {
@@ -37,8 +37,7 @@ export class CartItemsComponent implements OnInit {
       quantity: newQuantity,
     }
     this.cartService.addToCart(newItem);
-    this.cartItems = this.cartService.getCart();
-    this.quantityUpdate.emit();
+    this.modifyItemFromCart.emit();
   }
 
 }

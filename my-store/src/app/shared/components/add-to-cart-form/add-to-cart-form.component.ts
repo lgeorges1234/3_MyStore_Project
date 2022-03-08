@@ -9,6 +9,7 @@ import { Product } from 'src/app/model/Product';
 })
 export class AddToCartFormComponent implements OnInit {
   quantity: number = 0;
+  newQuantity: number = 0;
   quantityNumber: number[];
   @Input() product: Product;
 
@@ -37,6 +38,10 @@ export class AddToCartFormComponent implements OnInit {
     return 0;
   }
 
+  quantityChanged(newQuantity: any) {
+    this.newQuantity= newQuantity;
+  }
+
   onSubmit(): void {
     const product = {
       id: this.product.id,
@@ -44,7 +49,7 @@ export class AddToCartFormComponent implements OnInit {
       price: this.product.price,
       url: this.product.url,
       description: this.product.description,
-      quantity: this.quantity,
+      quantity: this.newQuantity,
     };
     this.cartService.addToCart(product);
     if (product.quantity != 0) alert(`You've added "${product.name}" item to your cart`)

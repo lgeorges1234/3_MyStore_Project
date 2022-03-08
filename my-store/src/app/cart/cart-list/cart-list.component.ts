@@ -41,4 +41,9 @@ export class CartListComponent implements OnInit {
     this.userService.addUser(newUser)
     this.router.navigateByUrl(`/cart/cart-success/${this.fullname}`)
   }
+
+  modifyItemFromCart() {
+    this.cartItems = this.cartService.getCart();
+    this.quantityUpdate();
+  }
 }

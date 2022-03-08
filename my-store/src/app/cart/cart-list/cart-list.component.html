@@ -1,7 +1,7 @@
 <div class="cart-container">
     <div class="cart-item" [ngSwitch]="cartItems.length>0">
         <div *ngSwitchCase=true>
-            <app-cart-items *ngFor="let item of cartItems" [item]="item" (quantityUpdate)="quantityUpdate()"></app-cart-items>
+            <app-cart-items *ngFor="let item of cartItems" [item]="item" (quantityUpdate)="quantityUpdate()" (modifyItemFromCart)="modifyItemFromCart()"></app-cart-items>
         </div>
         <div *ngSwitchCase=false>Your card is empty</div>
         <h2 class="total">Total: {{ totalPrice }} $</h2>
